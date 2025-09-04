@@ -99,8 +99,7 @@
                             title="LinkedIn">
                             <i class="fab fa-linkedin text-base"></i>
                         </a>
-                        <a href="mailto:varshith@example.com"
-                            target="_blank" class="w-10 h-10 bg-gray-50 border-2 border-gray-200 rounded-xl flex items-center justify-center text-gray-600 
+                        <a href="mailto:varshith@example.com" target="_blank" class="w-10 h-10 bg-gray-50 border-2 border-gray-200 rounded-xl flex items-center justify-center text-gray-600 
           transform transition-transform transition-colors duration-75 ease-out 
           hover:border-gray-900 hover:text-gray-900 hover:scale-110 will-change-transform no-border-transition"
                             title="Email">
@@ -123,7 +122,7 @@
     </section>
 
 
-    <!-- About Me Section -->
+    <!-- About Me Section - My Journey Vertically Centered -->
     <section class="py-16 px-4 bg-gray-50" id="about">
         <div class="max-w-6xl mx-auto">
             <!-- Section Header -->
@@ -135,25 +134,28 @@
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-                <!-- My Story -->
-                <div class="space-y-6">
-                    <h3 class="text-2xl lg:text-3xl font-bold text-gray-900 mb-6">My Journey</h3>
-                    <div class="space-y-4 text-gray-600 leading-relaxed">
-                        <p class="text-base">
-                            I started my career as a backend developer, building APIs and automation workflows that
-                            simplified complex tasks. Working on private-cloud products gave me exposure to VMware,
-                            storage protocols, and large-scale infrastructure challenges.
-                        </p>
-                        <p class="text-base">
-                            Over time, I realized my passion wasn't just in writing applications—it was in automating,
-                            scaling, and streamlining entire systems.
-                        </p>
-                        <p class="text-base">
-                            That's what led me into DevOps, where I now focus on CI/CD pipelines, containerization,
-                            cloud-native solutions, and infrastructure as code to deliver scalable and resilient
-                            systems.
-                        </p>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- My Story - VERTICALLY CENTERED -->
+                <div class="flex flex-col justify-center text-center lg:text-left min-h-[400px]">
+                    <div class="space-y-6">
+                        <h3 class="text-2xl lg:text-3xl font-bold text-gray-900 mb-6">My Journey</h3>
+                        <div class="space-y-4 text-gray-600 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                            <p class="text-base">
+                                I started my career as a backend developer, building APIs and automation workflows that
+                                simplified complex tasks. Working on private-cloud products gave me exposure to VMware,
+                                storage protocols, and large-scale infrastructure challenges.
+                            </p>
+                            <p class="text-base">
+                                Over time, I realized my passion wasn't just in writing applications—it was in
+                                automating,
+                                scaling, and streamlining entire systems.
+                            </p>
+                            <p class="text-base">
+                                That's what led me into DevOps, where I now focus on CI/CD pipelines, containerization,
+                                cloud-native solutions, and infrastructure as code to deliver scalable and resilient
+                                systems.
+                            </p>
+                        </div>
                     </div>
                 </div>
 
@@ -161,7 +163,7 @@
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <!-- Automation -->
                     <div
-                        class="bg-white p-6 rounded-2xl text-center hover:bg-gray-100 transition-all group hover:-translate-y-1">
+                        class="bg-white p-6 rounded-2xl text-center transform transition-all duration-200 ease-out hover:bg-gray-100 hover:scale-105 hover:shadow-lg will-change-transform">
                         <div class="w-16 h-16 bg-gray-50 rounded-xl flex items-center justify-center mx-auto mb-4">
                             <i class="fas fa-cogs text-2xl text-gray-700"></i>
                         </div>
@@ -171,9 +173,9 @@
                         </p>
                     </div>
 
-                    <!-- DevOps -->
+                    <!-- Cloud Native -->
                     <div
-                        class="bg-white p-6 rounded-2xl text-center hover:bg-gray-100 transition-all group hover:-translate-y-1">
+                        class="bg-white p-6 rounded-2xl text-center transform transition-all duration-200 ease-out hover:bg-gray-100 hover:scale-105 hover:shadow-lg will-change-transform">
                         <div class="w-16 h-16 bg-gray-50 rounded-xl flex items-center justify-center mx-auto mb-4">
                             <i class="fas fa-cloud text-2xl text-gray-700"></i>
                         </div>
@@ -185,7 +187,7 @@
 
                     <!-- Team Player -->
                     <div
-                        class="bg-white p-6 rounded-2xl text-center hover:bg-gray-100 transition-all group hover:-translate-y-1">
+                        class="bg-white p-6 rounded-2xl text-center transform transition-all duration-200 ease-out hover:bg-gray-100 hover:scale-105 hover:shadow-lg will-change-transform">
                         <div class="w-16 h-16 bg-gray-50 rounded-xl flex items-center justify-center mx-auto mb-4">
                             <i class="fas fa-users text-2xl text-gray-700"></i>
                         </div>
@@ -197,7 +199,7 @@
 
                     <!-- Problem Solver -->
                     <div
-                        class="bg-white p-6 rounded-2xl text-center hover:bg-gray-100 transition-all group hover:-translate-y-1">
+                        class="bg-white p-6 rounded-2xl text-center transform transition-all duration-200 ease-out hover:bg-gray-100 hover:scale-105 hover:shadow-lg will-change-transform">
                         <div class="w-16 h-16 bg-gray-50 rounded-xl flex items-center justify-center mx-auto mb-4">
                             <i class="fas fa-lightbulb text-2xl text-gray-700"></i>
                         </div>
@@ -210,6 +212,7 @@
             </div>
         </div>
     </section>
+
 
     <!-- Skills & Technologies Section -->
     <section class="py-16 px-4 bg-white" id="skills">
