@@ -1,380 +1,910 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mediaqueries.css" />
-  </head>
-  <body>
-    <nav id="desktop-nav">
-      <div class="logo">Varshith S</div>
-      <div>
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Varshith's portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-gray-50 text-gray-900 font-inter">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white border-b border-gray-200 z-50 py-3" id="navbar">
+        <div class="max-w-6xl mx-auto px-4 flex justify-between items-center">
+            <div class="text-xl font-bold text-gray-900">
+                <a href="#home">Varshith S</a>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-6" id="nav-menu">
+                <a href="#about"
+                    class="text-gray-600 hover:text-gray-900 font-medium transition-colors text-sm">About</a>
+                <a href="#skills"
+                    class="text-gray-600 hover:text-gray-900 font-medium transition-colors text-sm">Skills</a>
+                <a href="#experience"
+                    class="text-gray-600 hover:text-gray-900 font-medium transition-colors text-sm">Experience</a>
+                <a href="#projects"
+                    class="text-gray-600 hover:text-gray-900 font-medium transition-colors text-sm">Projects</a>
+                <a href="#contact"
+                    class="bg-gray-900 text-white px-4 py-2 rounded-full font-semibold transition-all hover:bg-gray-700 text-sm">Contact</a>
+            </div>
+
+            <!-- Hamburger Menu -->
+            <div class="md:hidden flex flex-col cursor-pointer hamburger" id="hamburger">
+                <span class="w-5 h-0.5 bg-gray-900 mb-1 transition-all"></span>
+                <span class="w-5 h-0.5 bg-gray-900 mb-1 transition-all"></span>
+                <span class="w-5 h-0.5 bg-gray-900 transition-all"></span>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="md:hidden fixed top-full left-0 w-full bg-white shadow-lg mobile-menu" id="mobile-menu">
+            <div class="flex flex-col py-4 px-4 space-y-1">
+                <a href="#about" class="text-gray-600 hover:text-gray-900 font-medium py-3 text-sm">About</a>
+                <a href="#skills" class="text-gray-600 hover:text-gray-900 font-medium py-3 text-sm">Skills</a>
+                <a href="#experience" class="text-gray-600 hover:text-gray-900 font-medium py-3 text-sm">Experience</a>
+                <a href="#projects" class="text-gray-600 hover:text-gray-900 font-medium py-3 text-sm">Projects</a>
+                <a href="#contact"
+                    class="bg-gray-900 text-white px-4 py-3 rounded-full font-semibold text-center mt-4 text-sm">Contact</a>
+            </div>
+        </div>
     </nav>
-    <nav id="hamburger-nav">
-      <div class="logo">Varshith S</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center px-4 bg-white pt-20" id="home">
+        <div class="max-w-6xl mx-auto w-full">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                <!-- Content -->
+                <div class="text-center lg:text-left">
+                    <h1 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-4 leading-tight">
+                        Hi, I'm Varshith S
+                    </h1>
+                    <h2 class="text-xl lg:text-2xl text-gray-600 font-medium mb-6">
+                        Backend Engineer & DevOps Specialist
+                    </h2>
+                    <p class="text-base lg:text-lg text-gray-600 mb-8 leading-relaxed max-w-xl mx-auto lg:mx-0">
+                        Specializing in backend development, automation, and DevOps practices to deliver scalable,
+                        business-driven solutions.
+                    </p>
+
+                    <!-- Buttons - OPTIMIZED HOVER PERFORMANCE -->
+                    <div class="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start mb-8">
+                        <button
+                            class="bg-gray-900 text-white px-6 py-3 rounded-xl text-sm font-semibold transform transition-all duration-150 ease-out hover:bg-gray-700 hover:scale-105 will-change-transform"
+                            id="download-resume-btn" onclick="downloadResume()">
+                            <i class="fas fa-download mr-2"></i>Download Resume
+                        </button>
+                        <button
+                            class="bg-transparent text-gray-900 border-2 border-gray-900 px-6 py-3 rounded-xl text-sm font-semibold transform transition-all duration-150 ease-out hover:bg-gray-900 hover:text-white hover:scale-105 will-change-transform"
+                            id="get-in-touch-btn">
+                            <i class="fas fa-briefcase mr-2"></i>View My Work
+                        </button>
+                    </div>
+
+
+                    <!-- Social Links - OPTIMIZED HOVER PERFORMANCE -->
+                    <div class="flex gap-3 justify-center lg:justify-start">
+                        <a href="https://github.com/varshiths" target="_blank"
+                            class="w-10 h-10 bg-gray-50 border-2 border-gray-200 rounded-xl flex items-center justify-center text-gray-600 transform transition-all duration-150 ease-out hover:border-gray-900 hover:text-gray-900 hover:scale-110 will-change-transform"
+                            title="GitHub">
+                            <i class="fab fa-github text-base"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/varshiths" target="_blank"
+                            class="w-10 h-10 bg-gray-50 border-2 border-gray-200 rounded-xl flex items-center justify-center text-gray-600 transform transition-all duration-150 ease-out hover:border-gray-900 hover:text-gray-900 hover:scale-110 will-change-transform"
+                            title="LinkedIn">
+                            <i class="fab fa-linkedin text-base"></i>
+                        </a>
+                        <a href="mailto:varshith@example.com"
+                            class="w-10 h-10 bg-gray-50 border-2 border-gray-200 rounded-xl flex items-center justify-center text-gray-600 transform transition-all duration-150 ease-out hover:border-gray-900 hover:text-gray-900 hover:scale-110 will-change-transform"
+                            title="Email">
+                            <i class="fas fa-envelope text-base"></i>
+                        </a>
+                    </div>
+
+                </div>
+
+                <!-- Profile Image -->
+                <div class="flex justify-center items-center">
+                    <div
+                        class="w-64 h-64 lg:w-80 lg:h-80 rounded-full overflow-hidden border-6 border-white shadow-xl transition-transform hover:scale-105">
+                        <img src="./images/profile.jpg" alt="Varshith S - Backend Engineer & DevOps Specialist"
+                            class="w-full h-full object-cover"
+                            onerror="this.src='./images/profile.png'; this.onerror=null;">
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-        </div>
-      </div>
-    </nav>
-    <section id="profile">
-      <div class="section__pic-container">
-        <img src="./assets/profile-pic.png" alt="Varshith S profile picture" />
-      </div>
-      <div class="section__text">
-        <p class="section__text__p1">Hello, I'm</p>
-        <h1 class="title">Varshith S</h1>
-        <p class="section__text__p2">Software Engineer</p>
-        <div class="btn-container">
-          <button
-            class="btn btn-color-2"
-            onclick="window.open('./assets/Varshith_Resume.pdf')"
-          >
-            Download CV
-          </button>
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">
-            Contact Info
-          </button>
-        </div>
-        <div id="socials-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="My LinkedIn profile"
-            class="icon"
-            onclick="location.href='https://www.linkedin.com/in/varshith-s/'"
-          />
-          <img
-            src="./assets/github.png"
-            alt="My Github profile"
-            class="icon"
-            onclick="location.href='https://github.com/s-varshith'"
-          />
-        </div>
-      </div>
     </section>
-    <section id="about">
-      <p class="section__text__p1">Get To Know More</p>
-      <h1 class="title">About Me</h1>
-      <div class="section-container">
-        <!-- <div class="section__pic-container">
-          <img
-            src="./assets/about-pic.png"
-            alt="Profile picture"
-            class="about-pic"
-          />
-        </div> -->
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <img
-                src="./assets/experience.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <h3>Experience</h3>
-              <p>2+ years</p>
+
+    <!-- About Me Section -->
+    <section class="py-16 px-4 bg-gray-50" id="about">
+        <div class="max-w-6xl mx-auto">
+            <!-- Section Header -->
+            <div class="text-center mb-12">
+                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">About Me</h2>
+                <p class="text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto">
+                    Passionate engineer with expertise in backend development, automation, and DevOps, focused on
+                    building scalable and reliable systems.
+                </p>
             </div>
-            <div class="details-container">
-              <img
-                src="./assets/education.png"
-                alt="Education icon"
-                class="icon"
-              />
-              <h3>Education</h3>
-              <p>B.Tech Computer Science and Engineering</p>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+                <!-- My Story -->
+                <div class="space-y-6">
+                    <h3 class="text-2xl lg:text-3xl font-bold text-gray-900 mb-6">My Journey</h3>
+                    <div class="space-y-4 text-gray-600 leading-relaxed">
+                        <p class="text-base">
+                            I started my career as a backend developer, building APIs and automation workflows that
+                            simplified complex tasks. Working on private-cloud products gave me exposure to VMware,
+                            storage protocols, and large-scale infrastructure challenges.
+                        </p>
+                        <p class="text-base">
+                            Over time, I realized my passion wasn't just in writing applications—it was in automating,
+                            scaling, and streamlining entire systems.
+                        </p>
+                        <p class="text-base">
+                            That's what led me into DevOps, where I now focus on CI/CD pipelines, containerization,
+                            cloud-native solutions, and infrastructure as code to deliver scalable and resilient
+                            systems.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Skills Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <!-- Automation -->
+                    <div
+                        class="bg-white p-6 rounded-2xl text-center hover:bg-gray-100 transition-all group hover:-translate-y-1">
+                        <div class="w-16 h-16 bg-gray-50 rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-cogs text-2xl text-gray-700"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-gray-900 mb-3">Automation</h4>
+                        <p class="text-sm text-gray-600">
+                            Simplifying workflows through automation.
+                        </p>
+                    </div>
+
+                    <!-- DevOps -->
+                    <div
+                        class="bg-white p-6 rounded-2xl text-center hover:bg-gray-100 transition-all group hover:-translate-y-1">
+                        <div class="w-16 h-16 bg-gray-50 rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-cloud text-2xl text-gray-700"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-gray-900 mb-3">Cloud Native</h4>
+                        <p class="text-sm text-gray-600">
+                            Building scalable cloud-native applications and infrastructure
+                        </p>
+                    </div>
+
+                    <!-- Team Player -->
+                    <div
+                        class="bg-white p-6 rounded-2xl text-center hover:bg-gray-100 transition-all group hover:-translate-y-1">
+                        <div class="w-16 h-16 bg-gray-50 rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-users text-2xl text-gray-700"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-gray-900 mb-3">Team Player</h4>
+                        <p class="text-sm text-gray-600">
+                            Collaborative approach to solving complex infrastructure challenges
+                        </p>
+                    </div>
+
+                    <!-- Problem Solver -->
+                    <div
+                        class="bg-white p-6 rounded-2xl text-center hover:bg-gray-100 transition-all group hover:-translate-y-1">
+                        <div class="w-16 h-16 bg-gray-50 rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-lightbulb text-2xl text-gray-700"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-gray-900 mb-3">Problem Solver</h4>
+                        <p class="text-sm text-gray-600">
+                            Love tackling challenging technical problems and system optimizations
+                        </p>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="text-container">
-            <p>
-              Associate Software Engineer with 2+ years of hands-on experience in Python-driven backend automation, RESTful API
-development, Flask web applications, and virtualization tooling for private-cloud products. Skilled in VMware vSphere
-and enterprise storage systems, with practical expertise in iSCSI and NFS network storage protocols. Passionate about
-delivering scalable, resilient infrastructure with clean web-based interfaces and automation workflows.
-            </p>
-          </div>
         </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#experience'"
-      />
     </section>
-    <section id="experience">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Experience</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <h2 class="experience-sub-title">Frontend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>HTML</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>CSS</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>SASS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>JavaScript</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>TypeScript</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Material UI</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
+
+    <!-- Skills & Technologies Section -->
+    <section class="py-16 px-4 bg-white" id="skills">
+        <div class="max-w-7xl mx-auto">
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-semibold text-black mb-4">Skills & Technologies</h2>
+                <p class="text-lg text-gray-500 max-w-2xl mx-auto">
+                    A comprehensive toolkit for building modern web applications
+                </p>
             </div>
-          </div>
-          <div class="details-container">
-            <h2 class="experience-sub-title">Frontend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>PostgreSQL</h3>
-                  <p>Basic</p>
+
+            <!-- Skills Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Frontend -->
+                <div
+                    class="bg-white border border-gray-200 rounded-3xl p-8 shadow-sm hover:shadow-md transition-all duration-300">
+                    <h3 class="text-lg font-semibold text-black mb-6">Frontend</h3>
+                    <div class="space-y-3">
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="bg-gray-100 rounded-full px-3 py-1.5 text-sm font-medium text-gray-700">React</span>
+                            <span
+                                class="bg-gray-100 rounded-full px-3 py-1.5 text-sm font-medium text-gray-700">TypeScript</span>
+                            <span
+                                class="bg-gray-100 rounded-full px-3 py-1.5 text-sm font-medium text-gray-700">Next.js</span>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="bg-gray-100 rounded-full px-3 py-1.5 text-sm font-medium text-gray-700">Tailwind
+                                CSS</span>
+                            <span
+                                class="bg-gray-100 rounded-full px-3 py-1.5 text-sm font-medium text-gray-700">Vue.js</span>
+                            <span
+                                class="bg-gray-100 rounded-full px-3 py-1.5 text-sm font-medium text-gray-700">Angular</span>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="bg-gray-100 rounded-full px-3 py-1.5 text-sm font-medium text-gray-700">HTML5</span>
+                            <span
+                                class="bg-gray-100 rounded-full px-3 py-1.5 text-sm font-medium text-gray-700">CSS3</span>
+                        </div>
+                    </div>
                 </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Node JS</h3>
-                  <p>Intermediate</p>
+
+                <!-- Backend -->
+                <div
+                    class="bg-white border border-gray-200 rounded-3xl p-8 shadow-sm hover:shadow-md transition-all duration-300">
+                    <h3 class="text-lg font-semibold text-black mb-6">Backend</h3>
+                    <div class="space-y-3">
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="bg-gray-100 rounded-full px-3 py-1.5 text-sm font-medium text-gray-700">Node.js</span>
+                            <span
+                                class="bg-gray-100 rounded-full px-3 py-1.5 text-sm font-medium text-gray-700">Python</span>
+                            <span
+                                class="bg-gray-100 rounded-full px-3 py-1.5 text-sm font-medium text-gray-700">Express</span>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="bg-gray-100 rounded-full px-3 py-1.5 text-sm font-medium text-gray-700">FastAPI</span>
+                            <span
+                                class="bg-gray-100 rounded-full px-3 py-1.5 text-sm font-medium text-gray-700">PostgreSQL</span>
+                            <span
+                                class="bg-gray-100 rounded-full px-3 py-1.5 text-sm font-medium text-gray-700">MongoDB</span>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="bg-gray-100 rounded-full px-3 py-1.5 text-sm font-medium text-gray-700">Redis</span>
+                            <span
+                                class="bg-gray-100 rounded-full px-3 py-1.5 text-sm font-medium text-gray-700">GraphQL</span>
+                        </div>
+                    </div>
                 </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Express JS</h3>
-                  <p>Intermediate</p>
+
+                <!-- Cloud & DevOps -->
+                <div
+                    class="bg-white border border-gray-200 rounded-3xl p-8 shadow-sm hover:shadow-md transition-all duration-300">
+                    <h3 class="text-lg font-semibold text-black mb-6">Cloud & DevOps</h3>
+                    <div class="space-y-3">
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="bg-gray-100 rounded-full px-3 py-1.5 text-sm font-medium text-gray-700">AWS</span>
+                            <span
+                                class="bg-gray-100 rounded-full px-3 py-1.5 text-sm font-medium text-gray-700">Docker</span>
+                            <span
+                                class="bg-gray-100 rounded-full px-3 py-1.5 text-sm font-medium text-gray-700">Kubernetes</span>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="bg-gray-100 rounded-full px-3 py-1.5 text-sm font-medium text-gray-700">CI/CD</span>
+                            <span
+                                class="bg-gray-100 rounded-full px-3 py-1.5 text-sm font-medium text-gray-700">Terraform</span>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gray-100 rounded-full px-3 py-1.5 text-sm font-medium text-gray-700">GitHub
+                                Actions</span>
+                            <span
+                                class="bg-gray-100 rounded-full px-3 py-1.5 text-sm font-medium text-gray-700">Vercel</span>
+                            <span
+                                class="bg-gray-100 rounded-full px-3 py-1.5 text-sm font-medium text-gray-700">Netlify</span>
+                        </div>
+                    </div>
                 </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Git</h3>
-                  <p>Intermediate</p>
+
+                <!-- Tools & Others -->
+                <div
+                    class="bg-white border border-gray-200 rounded-3xl p-8 shadow-sm hover:shadow-md transition-all duration-300">
+                    <h3 class="text-lg font-semibold text-black mb-6">Tools & Others</h3>
+                    <div class="space-y-3">
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="bg-gray-100 rounded-full px-3 py-1.5 text-sm font-medium text-gray-700">Git</span>
+                            <span
+                                class="bg-gray-100 rounded-full px-3 py-1.5 text-sm font-medium text-gray-700">Jest</span>
+                            <span
+                                class="bg-gray-100 rounded-full px-3 py-1.5 text-sm font-medium text-gray-700">Cypress</span>
+                            <span
+                                class="bg-gray-100 rounded-full px-3 py-1.5 text-sm font-medium text-gray-700">Figma</span>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="bg-gray-100 rounded-full px-3 py-1.5 text-sm font-medium text-gray-700">Postman</span>
+                            <span
+                                class="bg-gray-100 rounded-full px-3 py-1.5 text-sm font-medium text-gray-700">Linux</span>
+                            <span
+                                class="bg-gray-100 rounded-full px-3 py-1.5 text-sm font-medium text-gray-700">Agile</span>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gray-100 rounded-full px-3 py-1.5 text-sm font-medium text-gray-700">REST
+                                APIs</span>
+                        </div>
+                    </div>
                 </div>
-              </article>
             </div>
-          </div>
         </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#projects'"
-      />
     </section>
-    <section id="projects">
-      <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Projects</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-1.png"
-                alt="Project 1"
-                class="project-img"
-              />
+
+
+
+    <!-- Work Experience Section - FIXED -->
+    <!-- Work Experience Section - IMPROVED PIPE DESIGN -->
+    <section class="py-12 px-4 bg-gray-50" id="experience">
+        <div class="max-w-5xl mx-auto">
+            <!-- Section Header -->
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-semibold text-black mb-3">Work Experience</h2>
+                <p class="text-base text-gray-500 max-w-xl mx-auto">
+                    My professional journey and the impact I've made at each organization
+                </p>
             </div>
-            <h2 class="experience-sub-title project-title">Project One</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
+
+            <!-- Timeline - Desktop ONLY (Hidden on Mobile) -->
+            <div class="relative hidden lg:block">
+                <!-- Central Timeline Line - THINNER -->
+                <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gray-400 rounded-full"></div>
+
+                <!-- Timeline Items -->
+                <div class="space-y-8">
+                    <!-- Senior Software Engineer (Left Side) -->
+                    <div class="flex items-center justify-between">
+                        <div class="w-5/12 pr-4">
+                            <div
+                                class="bg-white rounded-2xl p-6 shadow-sm border border-gray-200 hover:shadow-md transition-all duration-300">
+                                <h3 class="text-lg font-bold text-black mb-1">Senior Software Engineer</h3>
+                                <h4 class="text-base font-semibold text-gray-600 mb-3">TechCorp Inc.</h4>
+                                <div class="flex items-center text-xs text-gray-500 mb-1">
+                                    <i class="far fa-calendar mr-1"></i>
+                                    <span>2022 - Present</span>
+                                </div>
+                                <div class="flex items-center text-xs text-gray-500 mb-4">
+                                    <i class="fas fa-map-marker-alt mr-1"></i>
+                                    <span>San Francisco, CA</span>
+                                </div>
+                                <p class="text-gray-600 leading-relaxed mb-4 text-sm">
+                                    Lead development of microservices architecture serving 100k+ users. Mentored junior
+                                    developers and improved deployment pipeline efficiency by 40%.
+                                </p>
+                                <div class="flex flex-wrap gap-1">
+                                    <span
+                                        class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">React</span>
+                                    <span
+                                        class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">Node.js</span>
+                                    <span
+                                        class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">AWS</span>
+                                    <span
+                                        class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">Docker</span>
+                                    <span
+                                        class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">PostgreSQL</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Timeline Circle - SMALLER & SIMPLER -->
+                        <div class="w-5 h-5 bg-gray-900 border-4 border-white rounded-full relative z-10 shadow-lg">
+                        </div>
+
+                        <div class="w-5/12"></div>
+                    </div>
+
+                    <!-- Full Stack Developer (Right Side) -->
+                    <div class="flex items-center justify-between">
+                        <div class="w-5/12"></div>
+
+                        <!-- Timeline Circle - SMALLER & SIMPLER -->
+                        <div class="w-5 h-5 bg-gray-900 border-4 border-white rounded-full relative z-10 shadow-lg">
+                        </div>
+
+                        <div class="w-5/12 pl-4">
+                            <div
+                                class="bg-white rounded-2xl p-6 shadow-sm border border-gray-200 hover:shadow-md transition-all duration-300">
+                                <h3 class="text-lg font-bold text-black mb-1">Full Stack Developer</h3>
+                                <h4 class="text-base font-semibold text-gray-600 mb-3">StartupXYZ</h4>
+                                <div class="flex items-center text-xs text-gray-500 mb-1">
+                                    <i class="far fa-calendar mr-1"></i>
+                                    <span>2020 - 2022</span>
+                                </div>
+                                <div class="flex items-center text-xs text-gray-500 mb-4">
+                                    <i class="fas fa-map-marker-alt mr-1"></i>
+                                    <span>Remote</span>
+                                </div>
+                                <p class="text-gray-600 leading-relaxed mb-4 text-sm">
+                                    Built and maintained customer-facing web applications. Collaborated with design and
+                                    product teams to deliver features that increased user engagement by 25%.
+                                </p>
+                                <div class="flex flex-wrap gap-1">
+                                    <span
+                                        class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">Vue.js</span>
+                                    <span
+                                        class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">Python</span>
+                                    <span
+                                        class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">MongoDB</span>
+                                    <span
+                                        class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">GCP</span>
+                                    <span
+                                        class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">Redis</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Frontend Developer (Left Side) -->
+                    <div class="flex items-center justify-between">
+                        <div class="w-5/12 pr-4">
+                            <div
+                                class="bg-white rounded-2xl p-6 shadow-sm border border-gray-200 hover:shadow-md transition-all duration-300">
+                                <h3 class="text-lg font-bold text-black mb-1">Frontend Developer</h3>
+                                <h4 class="text-base font-semibold text-gray-600 mb-3">Digital Agency</h4>
+                                <div class="flex items-center text-xs text-gray-500 mb-1">
+                                    <i class="far fa-calendar mr-1"></i>
+                                    <span>2019 - 2020</span>
+                                </div>
+                                <div class="flex items-center text-xs text-gray-500 mb-4">
+                                    <i class="fas fa-map-marker-alt mr-1"></i>
+                                    <span>New York, NY</span>
+                                </div>
+                                <p class="text-gray-600 leading-relaxed mb-4 text-sm">
+                                    Developed responsive websites and web applications for various clients. Optimized
+                                    performance resulting in 30% faster load times across all projects.
+                                </p>
+                                <div class="flex flex-wrap gap-1">
+                                    <span
+                                        class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">React</span>
+                                    <span
+                                        class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">TypeScript</span>
+                                    <span
+                                        class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">Sass</span>
+                                    <span
+                                        class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">Webpack</span>
+                                    <span
+                                        class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">Jest</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Timeline Circle - SMALLER & SIMPLER -->
+                        <div class="w-5 h-5 bg-gray-900 border-4 border-white rounded-full relative z-10 shadow-lg">
+                        </div>
+
+                        <div class="w-5/12"></div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-2.png"
-                alt="Project 2"
-                class="project-img"
-              />
+
+            <!-- Mobile Version ONLY (Hidden on Desktop) -->
+            <div class="lg:hidden">
+                <div class="relative">
+                    <!-- Vertical Timeline Line for Mobile - THINNER -->
+                    <div class="absolute left-4 top-0 bottom-0 w-1 bg-gray-400 rounded-full"></div>
+
+                    <div class="space-y-6">
+                        <!-- Mobile Experience Item 1 -->
+                        <div class="relative flex">
+                            <!-- Timeline Circle - SIMPLER -->
+                            <div
+                                class="absolute left-0 w-8 h-8 bg-gray-900 border-4 border-white rounded-full flex items-center justify-center shadow-lg">
+                            </div>
+
+                            <!-- Content - CLOSER TO PIPE -->
+                            <div class="ml-10 bg-white rounded-2xl p-5 shadow-sm border border-gray-200 flex-1">
+                                <h3 class="text-base font-bold text-black mb-1">Senior Software Engineer</h3>
+                                <h4 class="text-sm font-semibold text-gray-600 mb-2">TechCorp Inc.</h4>
+                                <div class="flex items-center text-xs text-gray-500 mb-1">
+                                    <i class="far fa-calendar mr-1"></i>
+                                    <span>2022 - Present</span>
+                                </div>
+                                <div class="flex items-center text-xs text-gray-500 mb-3">
+                                    <i class="fas fa-map-marker-alt mr-1"></i>
+                                    <span>San Francisco, CA</span>
+                                </div>
+                                <p class="text-gray-600 leading-relaxed mb-3 text-xs">
+                                    Lead development of microservices architecture serving 100k+ users. Mentored junior
+                                    developers and improved deployment pipeline efficiency by 40%.
+                                </p>
+                                <div class="flex flex-wrap gap-1">
+                                    <span
+                                        class="bg-gray-100 rounded-full px-2 py-0.5 text-xs font-medium text-gray-700">React</span>
+                                    <span
+                                        class="bg-gray-100 rounded-full px-2 py-0.5 text-xs font-medium text-gray-700">Node.js</span>
+                                    <span
+                                        class="bg-gray-100 rounded-full px-2 py-0.5 text-xs font-medium text-gray-700">AWS</span>
+                                    <span
+                                        class="bg-gray-100 rounded-full px-2 py-0.5 text-xs font-medium text-gray-700">Docker</span>
+                                    <span
+                                        class="bg-gray-100 rounded-full px-2 py-0.5 text-xs font-medium text-gray-700">PostgreSQL</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Mobile Experience Item 2 -->
+                        <div class="relative flex">
+                            <!-- Timeline Circle - SIMPLER -->
+                            <div
+                                class="absolute left-0 w-8 h-8 bg-gray-900 border-4 border-white rounded-full flex items-center justify-center shadow-lg">
+                            </div>
+
+                            <!-- Content - CLOSER TO PIPE -->
+                            <div class="ml-10 bg-white rounded-2xl p-5 shadow-sm border border-gray-200 flex-1">
+                                <h3 class="text-base font-bold text-black mb-1">Full Stack Developer</h3>
+                                <h4 class="text-sm font-semibold text-gray-600 mb-2">StartupXYZ</h4>
+                                <div class="flex items-center text-xs text-gray-500 mb-1">
+                                    <i class="far fa-calendar mr-1"></i>
+                                    <span>2020 - 2022</span>
+                                </div>
+                                <div class="flex items-center text-xs text-gray-500 mb-3">
+                                    <i class="fas fa-map-marker-alt mr-1"></i>
+                                    <span>Remote</span>
+                                </div>
+                                <p class="text-gray-600 leading-relaxed mb-3 text-xs">
+                                    Built and maintained customer-facing web applications. Collaborated with design and
+                                    product teams to deliver features that increased user engagement by 25%.
+                                </p>
+                                <div class="flex flex-wrap gap-1">
+                                    <span
+                                        class="bg-gray-100 rounded-full px-2 py-0.5 text-xs font-medium text-gray-700">Vue.js</span>
+                                    <span
+                                        class="bg-gray-100 rounded-full px-2 py-0.5 text-xs font-medium text-gray-700">Python</span>
+                                    <span
+                                        class="bg-gray-100 rounded-full px-2 py-0.5 text-xs font-medium text-gray-700">MongoDB</span>
+                                    <span
+                                        class="bg-gray-100 rounded-full px-2 py-0.5 text-xs font-medium text-gray-700">GCP</span>
+                                    <span
+                                        class="bg-gray-100 rounded-full px-2 py-0.5 text-xs font-medium text-gray-700">Redis</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Mobile Experience Item 3 -->
+                        <div class="relative flex">
+                            <!-- Timeline Circle - SIMPLER -->
+                            <div
+                                class="absolute left-0 w-8 h-8 bg-gray-900 border-4 border-white rounded-full flex items-center justify-center shadow-lg">
+                            </div>
+
+                            <!-- Content - CLOSER TO PIPE -->
+                            <div class="ml-10 bg-white rounded-2xl p-5 shadow-sm border border-gray-200 flex-1">
+                                <h3 class="text-base font-bold text-black mb-1">Frontend Developer</h3>
+                                <h4 class="text-sm font-semibold text-gray-600 mb-2">Digital Agency</h4>
+                                <div class="flex items-center text-xs text-gray-500 mb-1">
+                                    <i class="far fa-calendar mr-1"></i>
+                                    <span>2019 - 2020</span>
+                                </div>
+                                <div class="flex items-center text-xs text-gray-500 mb-3">
+                                    <i class="fas fa-map-marker-alt mr-1"></i>
+                                    <span>New York, NY</span>
+                                </div>
+                                <p class="text-gray-600 leading-relaxed mb-3 text-xs">
+                                    Developed responsive websites and web applications for various clients. Optimized
+                                    performance resulting in 30% faster load times across all projects.
+                                </p>
+                                <div class="flex flex-wrap gap-1">
+                                    <span
+                                        class="bg-gray-100 rounded-full px-2 py-0.5 text-xs font-medium text-gray-700">React</span>
+                                    <span
+                                        class="bg-gray-100 rounded-full px-2 py-0.5 text-xs font-medium text-gray-700">TypeScript</span>
+                                    <span
+                                        class="bg-gray-100 rounded-full px-2 py-0.5 text-xs font-medium text-gray-700">Sass</span>
+                                    <span
+                                        class="bg-gray-100 rounded-full px-2 py-0.5 text-xs font-medium text-gray-700">Webpack</span>
+                                    <span
+                                        class="bg-gray-100 rounded-full px-2 py-0.5 text-xs font-medium text-gray-700">Jest</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <h2 class="experience-sub-title project-title">Project Two</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-3.png"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Project Three</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
         </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#contact'"
-      />
     </section>
-    <section id="contact">
-      <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img
-            src="./assets/email.png"
-            alt="Email icon"
-            class="icon contact-icon email-icon"
-          />
-          <p><a href="mailto:varshiths499@gmail.com">varshiths499@gmail.com</a></p>
+
+
+
+
+
+
+    <!-- Featured Projects Section -->
+    <section class="py-12 px-4 bg-white" id="projects">
+        <div class="max-w-6xl mx-auto">
+            <!-- Section Header -->
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-semibold text-black mb-3">Featured Projects</h2>
+                <p class="text-base text-gray-500 max-w-2xl mx-auto">
+                    A selection of projects that showcase my skills and problem-solving abilities
+                </p>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-grid">
+                <!-- Project 1: E-Commerce Platform -->
+                <div
+                    class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group project-card">
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=250&fit=crop&crop=center"
+                            alt="E-Commerce Platform"
+                            class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div
+                            class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300">
+                        </div>
+                    </div>
+
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-black mb-2">E-Commerce Platform</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                            A full-stack e-commerce solution with payment integration, inventory management, and admin
+                            dashboard.
+                        </p>
+
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span
+                                class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">React</span>
+                            <span
+                                class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">Node.js</span>
+                            <span
+                                class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">PostgreSQL</span>
+                            <span
+                                class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">Stripe</span>
+                            <span
+                                class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">AWS</span>
+                        </div>
+
+                        <!-- Action Buttons - UPDATED STYLING -->
+                        <div class="flex gap-3">
+                            <button
+                                class="flex items-center gap-2 bg-white border-2 border-gray-900 text-gray-900 px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-900 hover:text-white transition-colors">
+                                <i class="fab fa-github"></i>
+                                <span>Code</span>
+                            </button>
+                            <button
+                                class="flex items-center gap-2 bg-black text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-800 transition-colors">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>Live Demo</span>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Project 2: Task Management App -->
+                <div
+                    class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group project-card">
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=250&fit=crop&crop=center"
+                            alt="Task Management App"
+                            class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div
+                            class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300">
+                        </div>
+                    </div>
+
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-black mb-2">Task Management App</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                            Collaborative project management tool with real-time updates, file sharing, and team
+                            communication.
+                        </p>
+
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span
+                                class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">Next.js</span>
+                            <span
+                                class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">TypeScript</span>
+                            <span
+                                class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">Prisma</span>
+                            <span
+                                class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">Socket.io</span>
+                            <span
+                                class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">Vercel</span>
+                        </div>
+
+                        <!-- Action Buttons - UPDATED STYLING -->
+                        <div class="flex gap-3">
+                            <button
+                                class="flex items-center gap-2 bg-white border-2 border-gray-900 text-gray-900 px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-900 hover:text-white transition-colors">
+                                <i class="fab fa-github"></i>
+                                <span>Code</span>
+                            </button>
+                            <button
+                                class="flex items-center gap-2 bg-black text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-800 transition-colors">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>Live Demo</span>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Project 3: Analytics Dashboard -->
+                <div
+                    class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group project-card">
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=250&fit=crop&crop=center"
+                            alt="Analytics Dashboard"
+                            class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div
+                            class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300">
+                        </div>
+                    </div>
+
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-black mb-2">Analytics Dashboard</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                            Real-time analytics dashboard with interactive charts, data visualization, and automated
+                            reporting.
+                        </p>
+
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span
+                                class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">Vue.js</span>
+                            <span
+                                class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">Python</span>
+                            <span
+                                class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">FastAPI</span>
+                            <span
+                                class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">D3.js</span>
+                            <span
+                                class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">Docker</span>
+                        </div>
+
+                        <!-- Action Buttons - UPDATED STYLING -->
+                        <div class="flex gap-3">
+                            <button
+                                class="flex items-center gap-2 bg-white border-2 border-gray-900 text-gray-900 px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-900 hover:text-white transition-colors">
+                                <i class="fab fa-github"></i>
+                                <span>Code</span>
+                            </button>
+                            <button
+                                class="flex items-center gap-2 bg-black text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-800 transition-colors">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>Live Demo</span>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Show More/Less Button -->
+            <div class="text-center mt-12" id="show-more-container">
+                <button id="show-more-btn"
+                    class="bg-transparent text-gray-900 border-2 border-gray-900 px-8 py-3 rounded-xl font-semibold transition-all hover:bg-gray-900 hover:text-white hover:-translate-y-0.5">
+                    <i class="fas fa-chevron-down mr-2"></i>
+                    Show More Projects
+                </button>
+            </div>
         </div>
-        <div class="contact-info-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="LinkedIn icon"
-            class="icon contact-icon"
-          />
-          <p><a href="https://www.linkedin.com/in/varshith-s/">LinkedIn</a></p>
-        </div>
-      </div>
     </section>
-    <footer>
-      <nav>
-        <div class="nav-links-container">
-          <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
+
+
+    <!-- Contact Section - Simple Design -->
+    <section class="py-16 px-4 bg-gray-50" id="contact">
+        <div class="max-w-4xl mx-auto">
+            <!-- Section Content -->
+            <div class="max-w-2xl">
+                <h2 class="text-4xl font-bold text-black mb-8">Let's Connect</h2>
+                <p class="text-lg text-gray-600 leading-relaxed mb-12">
+                    I'm always interested in hearing about new opportunities, whether it's a freelance project,
+                    full-time position, or just a chat about technology and innovation.
+                </p>
+
+                <!-- Contact Information -->
+                <div class="space-y-6">
+                    <!-- Email -->
+                    <div class="flex items-start gap-6">
+                        <div class="w-16 h-16 bg-gray-200 rounded-2xl flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-envelope text-xl text-gray-700"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-black mb-2">Email</h3>
+                            <a href="mailto:varshith@example.com"
+                                class="text-lg text-gray-600 hover:text-gray-900 transition-colors">
+                                varshith@example.com
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Phone -->
+                    <div class="flex items-start gap-6">
+                        <div class="w-16 h-16 bg-gray-200 rounded-2xl flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-phone text-xl text-gray-700"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-black mb-2">Phone</h3>
+                            <a href="tel:+15551234567"
+                                class="text-lg text-gray-600 hover:text-gray-900 transition-colors">
+                                +1 (555) 123-4567
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Location -->
+                    <div class="flex items-start gap-6">
+                        <div class="w-16 h-16 bg-gray-200 rounded-2xl flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-map-marker-alt text-xl text-gray-700"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-black mb-2">Location</h3>
+                            <span class="text-lg text-gray-600">San Francisco, CA</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </nav>
-      <p>Copyright &#169; 2025 Varshith S. All Rights Reserved.</p>
+    </section>
+
+    <!-- Simple Footer -->
+    <footer class="py-12 px-4 bg-white border-t border-gray-100">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+                <!-- Left Side: Name and Tagline -->
+                <div class="text-center md:text-left mb-6 md:mb-0">
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Varshith S</h3>
+                    <p class="text-gray-600">Building the future, one line of code at a time.</p>
+                </div>
+
+                <!-- Right Side: Social Links -->
+                <div class="flex gap-6 justify-center md:justify-end">
+                    <a href="https://github.com/varshiths" target="_blank"
+                        class="text-gray-600 hover:text-gray-900 transition-colors" title="GitHub">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/varshiths" target="_blank"
+                        class="text-gray-600 hover:text-gray-900 transition-colors" title="LinkedIn">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                    <a href="https://twitter.com/varshiths" target="_blank"
+                        class="text-gray-600 hover:text-gray-900 transition-colors" title="Twitter">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                    <a href="mailto:varshith@example.com" class="text-gray-600 hover:text-gray-900 transition-colors"
+                        title="Email">
+                        <i class="fas fa-envelope text-xl"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Copyright Notice -->
+            <div class="border-t border-gray-100 mt-8 pt-6 text-center">
+                <p class="text-sm text-gray-500">© 2025 Varshith S. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
+
+
+
+
     <script src="script.js"></script>
-  </body>
+    <script>
+        // Resume download function
+        function downloadResume() {
+            const resumeURL = './documents/Varshith_S_Resume.pdf';
+            const link = document.createElement('a');
+            link.href = resumeURL;
+            link.download = 'Varshith_S_Resume.pdf';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
+</body>
+
 </html>
