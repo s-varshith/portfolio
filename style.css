@@ -338,3 +338,6 @@ section {
         transform: none !important;
     }
 }
+.no-border-transition {
+  transition-property: transform, color !important;
+}
