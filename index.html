@@ -12,6 +12,9 @@
 </head>
 
 <body class="bg-gray-50 text-gray-900 font-inter">
+    <!-- Background Overlay -->
+    <div id="menu-overlay" class="fixed inset-0 bg-black/40 backdrop-blur-sm hidden z-30"></div>
+
     <!-- Navigation -->
     <nav class="fixed top-0 w-full bg-white border-b border-gray-200 z-50 py-3" id="navbar">
         <div class="max-w-6xl mx-auto px-4 flex justify-between items-center">
@@ -19,18 +22,35 @@
                 <a href="#home">Varshith S</a>
             </div>
 
-            <!-- Desktop Menu -->
             <div class="hidden md:flex items-center space-x-6" id="nav-menu">
                 <a href="#about"
-                    class="text-gray-600 hover:text-gray-900 font-medium transition-colors text-sm">About</a>
+                    class="relative text-gray-600 hover:text-gray-900 font-medium transition-colors text-sm group">
+                    About
+                    <span
+                        class="absolute left-0 -bottom-1 w-0 h-0.5 bg-gray-900 transition-all duration-300 group-hover:w-full"></span>
+                </a>
                 <a href="#skills"
-                    class="text-gray-600 hover:text-gray-900 font-medium transition-colors text-sm">Skills</a>
-                <a href="#experience"
-                    class="text-gray-600 hover:text-gray-900 font-medium transition-colors text-sm">Experience</a>
+                    class="relative text-gray-600 hover:text-gray-900 font-medium transition-colors text-sm group">
+                    Skills
+                    <span
+                        class="absolute left-0 -bottom-1 w-0 h-0.5 bg-gray-900 transition-all duration-300 group-hover:w-full"></span>
+                </a>
                 <a href="#projects"
-                    class="text-gray-600 hover:text-gray-900 font-medium transition-colors text-sm">Projects</a>
+                    class="relative text-gray-600 hover:text-gray-900 font-medium transition-colors text-sm group">
+                    Projects
+                    <span
+                        class="absolute left-0 -bottom-1 w-0 h-0.5 bg-gray-900 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="#experience"
+                    class="relative text-gray-600 hover:text-gray-900 font-medium transition-colors text-sm group">
+                    Experience
+                    <span
+                        class="absolute left-0 -bottom-1 w-0 h-0.5 bg-gray-900 transition-all duration-300 group-hover:w-full"></span>
+                </a>
                 <a href="#contact"
-                    class="bg-gray-900 text-white px-4 py-2 rounded-full font-semibold transition-all hover:bg-gray-700 text-sm">Contact</a>
+                    class="bg-gray-900 text-white px-4 py-2 rounded-md font-semibold transition-all hover:bg-gray-700 text-sm">
+                    Contact
+                </a>
             </div>
 
             <!-- Hamburger Menu -->
@@ -46,19 +66,18 @@
             <div class="flex flex-col py-4 px-4 space-y-1">
                 <a href="#about" class="text-gray-600 hover:text-gray-900 font-medium py-3 text-sm">About</a>
                 <a href="#skills" class="text-gray-600 hover:text-gray-900 font-medium py-3 text-sm">Skills</a>
-                <a href="#experience" class="text-gray-600 hover:text-gray-900 font-medium py-3 text-sm">Experience</a>
                 <a href="#projects" class="text-gray-600 hover:text-gray-900 font-medium py-3 text-sm">Projects</a>
+                <a href="#experience" class="text-gray-600 hover:text-gray-900 font-medium py-3 text-sm">Experience</a>
                 <a href="#contact"
-                    class="bg-gray-900 text-white px-4 py-3 rounded-full font-semibold text-center mt-4 text-sm">Contact</a>
+                    class="bg-gray-900 text-white px-4 py-3 rounded-xl font-semibold text-center mt-4 text-sm">Contact</a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section - Mobile: Profile First, Text Second -->
+    <!-- Hero Section -->
     <section class="min-h-screen flex items-center justify-center px-4 bg-white pt-20" id="home">
         <div class="max-w-6xl mx-auto w-full">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-                <!-- Content - Order 2 on mobile (shows after profile), Order 1 on lg+ -->
                 <div class="text-center lg:text-left order-2 lg:order-1">
                     <h1 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-4 leading-tight">
                         Hi, I'm Varshith S
@@ -71,7 +90,6 @@
                         business-driven solutions.
                     </p>
 
-                    <!-- Buttons - OPTIMIZED HOVER PERFORMANCE -->
                     <div class="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start mb-8">
                         <button
                             class="bg-gray-900 text-white px-6 py-3 rounded-xl text-sm font-semibold transform transition-all duration-150 ease-out hover:bg-gray-700 hover:scale-105 will-change-transform"
@@ -121,8 +139,7 @@
         </div>
     </section>
 
-
-    <!-- About Me Section - My Journey Vertically Centered -->
+    <!-- About Me Section -->
     <section class="py-16 px-4 bg-gray-50" id="about">
         <div class="max-w-6xl mx-auto">
             <!-- Section Header -->
@@ -135,7 +152,7 @@
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <!-- My Story - VERTICALLY CENTERED -->
+                <!-- My Story -->
                 <div class="flex flex-col justify-center text-center lg:text-left min-h-[400px]">
                     <div class="space-y-6">
                         <h3 class="text-2xl lg:text-3xl font-bold text-gray-900 mb-6">My Journey</h3>
@@ -213,9 +230,6 @@
         </div>
     </section>
 
-
-
-
     <!-- Technical Skills Section - Smaller Font Sizes -->
     <section class="py-16 px-4 bg-white" id="skills">
         <div class="max-w-6xl mx-auto">
@@ -230,7 +244,7 @@
 
             <!-- Skills Grid -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Programming Languages -->
+                <!-- Programming & Web Technologies -->
                 <div
                     class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-200">
                     <div class="flex items-center mb-6">
@@ -240,13 +254,13 @@
                         <h3 class="text-base font-bold text-gray-900">Programming & Web Technologies</h3>
                     </div>
                     <div class="flex flex-wrap gap-2">
-                        <span class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">Python</span>
-                        <span class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">Java</span>
-                        <span class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">Perl</span>
+                        <span class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">Python</span>
+                        <span class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">Java</span>
+                        <span class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">Perl</span>
                         <span
-                            class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">JavaScript</span>
-                        <span class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">HTML</span>
-                        <span class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">CSS</span>
+                            class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">JavaScript</span>
+                        <span class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">HTML</span>
+                        <span class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">CSS</span>
                     </div>
                 </div>
 
@@ -260,25 +274,22 @@
                         <h3 class="text-base font-bold text-gray-900">DevOps & Tools</h3>
                     </div>
                     <div class="flex flex-wrap gap-2">
-                        <span class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">Docker</span>
+                        <span class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">Docker</span>
                         <span
-                            class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">Kubernetes</span>
+                            class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">Kubernetes</span>
+                        <span class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">Jenkins</span>
                         <span
-                            class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">Jenkins</span>
+                            class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">Terraform</span>
+                        <span class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">Ansible</span>
+                        <span class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">Airflow</span>
+                        <span class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">Git</span>
+                        <span class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">gitHub</span>
                         <span
-                            class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">Terraform</span>
-                        <span
-                            class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">Ansible</span>
-                        <span
-                            class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">Airflow</span>
-                        <span class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">Git</span>
-                        <span class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">gitHub</span>
-                        <span
-                            class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">Bitbucket</span>
+                            class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">Bitbucket</span>
                     </div>
                 </div>
 
-                <!-- JavaScript Libraries & Frameworks -->
+                <!-- OS & Virtualization -->
                 <div
                     class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-200">
                     <div class="flex items-center mb-6">
@@ -288,20 +299,18 @@
                         <h3 class="text-base font-bold text-gray-900">OS & Virtualization</h3>
                     </div>
                     <div class="flex flex-wrap gap-2">
-                        <span class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">Linux</span>
+                        <span class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">Linux</span>
+                        <span class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">Windows</span>
+                        <span class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">Unix</span>
+                        <span class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">VMware</span>
+                        <span class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">vSphere</span>
+                        <span class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">VLAN</span>
                         <span
-                            class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">Windows</span>
-                        <span class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">Unix</span>
-                        <span class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">VMware</span>
-                        <span
-                            class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">vSphere</span>
-                        <span class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">VLAN</span>
-                        <span
-                            class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">Hypervisor</span>
+                            class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">Hypervisor</span>
                     </div>
                 </div>
 
-                <!-- Web Frameworks -->
+                <!-- Databases -->
                 <div
                     class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-200">
                     <div class="flex items-center mb-6">
@@ -311,15 +320,15 @@
                         <h3 class="text-base font-bold text-gray-900">Databases</h3>
                     </div>
                     <div class="flex flex-wrap gap-2">
-                        <span class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">MySQL</span>
-                        <span class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">Microsoft SQL
+                        <span class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">MySQL</span>
+                        <span class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">Microsoft SQL
                             Server</span>
                         <span
-                            class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">PostgreSQL</span>
+                            class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">PostgreSQL</span>
                     </div>
                 </div>
 
-                <!-- Backend as a Service -->
+                <!-- Frameworks & Libraries -->
                 <div
                     class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-200">
                     <div class="flex items-center mb-6">
@@ -329,15 +338,14 @@
                         <h3 class="text-base font-bold text-gray-900">Frameworks & Libraries</h3>
                     </div>
                     <div class="flex flex-wrap gap-2">
-                        <span class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">Spring
+                        <span class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">Spring
                             Boot</span>
-                        <span
-                            class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">ReactJS</span>
-                        <span class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">Flask</span>
+                        <span class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">ReactJS</span>
+                        <span class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">Flask</span>
                     </div>
                 </div>
 
-                <!-- Testing -->
+                <!-- Project Management & Monitoring Tools -->
                 <div
                     class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-200">
                     <div class="flex items-center mb-6">
@@ -347,302 +355,21 @@
                         <h3 class="text-base font-bold text-gray-900">Project Management & Monitoring Tools</h3>
                     </div>
                     <div class="flex flex-wrap gap-2">
-                        <span class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">JIRA</span>
+                        <span class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">JIRA</span>
                         <span
-                            class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">Confluence</span>
-                        <span
-                            class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">TestRail</span>
-                        <span
-                            class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">Swagger</span>
-                        <span
-                            class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">Grafana</span>
-                        <span class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">FOSSA</span>
+                            class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">Confluence</span>
+                        <span class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">TestRail</span>
+                        <span class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">Swagger</span>
+                        <span class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">Grafana</span>
+                        <span class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">FOSSA</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-
-
-
-    <!-- Work Experience Section - FIXED -->
-    <!-- Work Experience Section - IMPROVED PIPE DESIGN -->
-    <section class="py-12 px-4 bg-gray-50" id="experience">
-        <div class="max-w-5xl mx-auto">
-            <!-- Section Header -->
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-semibold text-black mb-3">Work Experience</h2>
-                <p class="text-base text-gray-500 max-w-xl mx-auto">
-                    My professional journey and the impact I've made at each organization
-                </p>
-            </div>
-
-            <!-- Timeline - Desktop ONLY (Hidden on Mobile) -->
-            <div class="relative hidden lg:block">
-                <!-- Central Timeline Line - THINNER -->
-                <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gray-400 rounded-full"></div>
-
-                <!-- Timeline Items -->
-                <div class="space-y-8">
-                    <!-- Senior Software Engineer (Left Side) -->
-                    <div class="flex items-center justify-between">
-                        <div class="w-5/12 pr-4">
-                            <div
-                                class="bg-white rounded-2xl p-6 shadow-sm border border-gray-200 hover:shadow-md transition-all duration-300">
-                                <h3 class="text-lg font-bold text-black mb-1">Senior Software Engineer</h3>
-                                <h4 class="text-base font-semibold text-gray-600 mb-3">TechCorp Inc.</h4>
-                                <div class="flex items-center text-xs text-gray-500 mb-1">
-                                    <i class="far fa-calendar mr-1"></i>
-                                    <span>2022 - Present</span>
-                                </div>
-                                <div class="flex items-center text-xs text-gray-500 mb-4">
-                                    <i class="fas fa-map-marker-alt mr-1"></i>
-                                    <span>San Francisco, CA</span>
-                                </div>
-                                <p class="text-gray-600 leading-relaxed mb-4 text-sm">
-                                    Lead development of microservices architecture serving 100k+ users. Mentored junior
-                                    developers and improved deployment pipeline efficiency by 40%.
-                                </p>
-                                <div class="flex flex-wrap gap-1">
-                                    <span
-                                        class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">React</span>
-                                    <span
-                                        class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">Node.js</span>
-                                    <span
-                                        class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">AWS</span>
-                                    <span
-                                        class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">Docker</span>
-                                    <span
-                                        class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">PostgreSQL</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Timeline Circle - SMALLER & SIMPLER -->
-                        <div class="w-5 h-5 bg-gray-900 border-4 border-white rounded-full relative z-10 shadow-lg">
-                        </div>
-
-                        <div class="w-5/12"></div>
-                    </div>
-
-                    <!-- Full Stack Developer (Right Side) -->
-                    <div class="flex items-center justify-between">
-                        <div class="w-5/12"></div>
-
-                        <!-- Timeline Circle - SMALLER & SIMPLER -->
-                        <div class="w-5 h-5 bg-gray-900 border-4 border-white rounded-full relative z-10 shadow-lg">
-                        </div>
-
-                        <div class="w-5/12 pl-4">
-                            <div
-                                class="bg-white rounded-2xl p-6 shadow-sm border border-gray-200 hover:shadow-md transition-all duration-300">
-                                <h3 class="text-lg font-bold text-black mb-1">Full Stack Developer</h3>
-                                <h4 class="text-base font-semibold text-gray-600 mb-3">StartupXYZ</h4>
-                                <div class="flex items-center text-xs text-gray-500 mb-1">
-                                    <i class="far fa-calendar mr-1"></i>
-                                    <span>2020 - 2022</span>
-                                </div>
-                                <div class="flex items-center text-xs text-gray-500 mb-4">
-                                    <i class="fas fa-map-marker-alt mr-1"></i>
-                                    <span>Remote</span>
-                                </div>
-                                <p class="text-gray-600 leading-relaxed mb-4 text-sm">
-                                    Built and maintained customer-facing web applications. Collaborated with design and
-                                    product teams to deliver features that increased user engagement by 25%.
-                                </p>
-                                <div class="flex flex-wrap gap-1">
-                                    <span
-                                        class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">Vue.js</span>
-                                    <span
-                                        class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">Python</span>
-                                    <span
-                                        class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">MongoDB</span>
-                                    <span
-                                        class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">GCP</span>
-                                    <span
-                                        class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">Redis</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Frontend Developer (Left Side) -->
-                    <div class="flex items-center justify-between">
-                        <div class="w-5/12 pr-4">
-                            <div
-                                class="bg-white rounded-2xl p-6 shadow-sm border border-gray-200 hover:shadow-md transition-all duration-300">
-                                <h3 class="text-lg font-bold text-black mb-1">Frontend Developer</h3>
-                                <h4 class="text-base font-semibold text-gray-600 mb-3">Digital Agency</h4>
-                                <div class="flex items-center text-xs text-gray-500 mb-1">
-                                    <i class="far fa-calendar mr-1"></i>
-                                    <span>2019 - 2020</span>
-                                </div>
-                                <div class="flex items-center text-xs text-gray-500 mb-4">
-                                    <i class="fas fa-map-marker-alt mr-1"></i>
-                                    <span>New York, NY</span>
-                                </div>
-                                <p class="text-gray-600 leading-relaxed mb-4 text-sm">
-                                    Developed responsive websites and web applications for various clients. Optimized
-                                    performance resulting in 30% faster load times across all projects.
-                                </p>
-                                <div class="flex flex-wrap gap-1">
-                                    <span
-                                        class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">React</span>
-                                    <span
-                                        class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">TypeScript</span>
-                                    <span
-                                        class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">Sass</span>
-                                    <span
-                                        class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">Webpack</span>
-                                    <span
-                                        class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">Jest</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Timeline Circle - SMALLER & SIMPLER -->
-                        <div class="w-5 h-5 bg-gray-900 border-4 border-white rounded-full relative z-10 shadow-lg">
-                        </div>
-
-                        <div class="w-5/12"></div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Mobile Version ONLY (Hidden on Desktop) -->
-            <div class="lg:hidden">
-                <div class="relative">
-                    <!-- Vertical Timeline Line for Mobile - THINNER -->
-                    <div class="absolute left-4 top-0 bottom-0 w-1 bg-gray-400 rounded-full"></div>
-
-                    <div class="space-y-6">
-                        <!-- Mobile Experience Item 1 -->
-                        <div class="relative flex">
-                            <!-- Timeline Circle - SIMPLER -->
-                            <div
-                                class="absolute left-0 w-8 h-8 bg-gray-900 border-4 border-white rounded-full flex items-center justify-center shadow-lg">
-                            </div>
-
-                            <!-- Content - CLOSER TO PIPE -->
-                            <div class="ml-10 bg-white rounded-2xl p-5 shadow-sm border border-gray-200 flex-1">
-                                <h3 class="text-base font-bold text-black mb-1">Senior Software Engineer</h3>
-                                <h4 class="text-sm font-semibold text-gray-600 mb-2">TechCorp Inc.</h4>
-                                <div class="flex items-center text-xs text-gray-500 mb-1">
-                                    <i class="far fa-calendar mr-1"></i>
-                                    <span>2022 - Present</span>
-                                </div>
-                                <div class="flex items-center text-xs text-gray-500 mb-3">
-                                    <i class="fas fa-map-marker-alt mr-1"></i>
-                                    <span>San Francisco, CA</span>
-                                </div>
-                                <p class="text-gray-600 leading-relaxed mb-3 text-xs">
-                                    Lead development of microservices architecture serving 100k+ users. Mentored junior
-                                    developers and improved deployment pipeline efficiency by 40%.
-                                </p>
-                                <div class="flex flex-wrap gap-1">
-                                    <span
-                                        class="bg-gray-100 rounded-full px-2 py-0.5 text-xs font-medium text-gray-700">React</span>
-                                    <span
-                                        class="bg-gray-100 rounded-full px-2 py-0.5 text-xs font-medium text-gray-700">Node.js</span>
-                                    <span
-                                        class="bg-gray-100 rounded-full px-2 py-0.5 text-xs font-medium text-gray-700">AWS</span>
-                                    <span
-                                        class="bg-gray-100 rounded-full px-2 py-0.5 text-xs font-medium text-gray-700">Docker</span>
-                                    <span
-                                        class="bg-gray-100 rounded-full px-2 py-0.5 text-xs font-medium text-gray-700">PostgreSQL</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Mobile Experience Item 2 -->
-                        <div class="relative flex">
-                            <!-- Timeline Circle - SIMPLER -->
-                            <div
-                                class="absolute left-0 w-8 h-8 bg-gray-900 border-4 border-white rounded-full flex items-center justify-center shadow-lg">
-                            </div>
-
-                            <!-- Content - CLOSER TO PIPE -->
-                            <div class="ml-10 bg-white rounded-2xl p-5 shadow-sm border border-gray-200 flex-1">
-                                <h3 class="text-base font-bold text-black mb-1">Full Stack Developer</h3>
-                                <h4 class="text-sm font-semibold text-gray-600 mb-2">StartupXYZ</h4>
-                                <div class="flex items-center text-xs text-gray-500 mb-1">
-                                    <i class="far fa-calendar mr-1"></i>
-                                    <span>2020 - 2022</span>
-                                </div>
-                                <div class="flex items-center text-xs text-gray-500 mb-3">
-                                    <i class="fas fa-map-marker-alt mr-1"></i>
-                                    <span>Remote</span>
-                                </div>
-                                <p class="text-gray-600 leading-relaxed mb-3 text-xs">
-                                    Built and maintained customer-facing web applications. Collaborated with design and
-                                    product teams to deliver features that increased user engagement by 25%.
-                                </p>
-                                <div class="flex flex-wrap gap-1">
-                                    <span
-                                        class="bg-gray-100 rounded-full px-2 py-0.5 text-xs font-medium text-gray-700">Vue.js</span>
-                                    <span
-                                        class="bg-gray-100 rounded-full px-2 py-0.5 text-xs font-medium text-gray-700">Python</span>
-                                    <span
-                                        class="bg-gray-100 rounded-full px-2 py-0.5 text-xs font-medium text-gray-700">MongoDB</span>
-                                    <span
-                                        class="bg-gray-100 rounded-full px-2 py-0.5 text-xs font-medium text-gray-700">GCP</span>
-                                    <span
-                                        class="bg-gray-100 rounded-full px-2 py-0.5 text-xs font-medium text-gray-700">Redis</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Mobile Experience Item 3 -->
-                        <div class="relative flex">
-                            <!-- Timeline Circle - SIMPLER -->
-                            <div
-                                class="absolute left-0 w-8 h-8 bg-gray-900 border-4 border-white rounded-full flex items-center justify-center shadow-lg">
-                            </div>
-
-                            <!-- Content - CLOSER TO PIPE -->
-                            <div class="ml-10 bg-white rounded-2xl p-5 shadow-sm border border-gray-200 flex-1">
-                                <h3 class="text-base font-bold text-black mb-1">Frontend Developer</h3>
-                                <h4 class="text-sm font-semibold text-gray-600 mb-2">Digital Agency</h4>
-                                <div class="flex items-center text-xs text-gray-500 mb-1">
-                                    <i class="far fa-calendar mr-1"></i>
-                                    <span>2019 - 2020</span>
-                                </div>
-                                <div class="flex items-center text-xs text-gray-500 mb-3">
-                                    <i class="fas fa-map-marker-alt mr-1"></i>
-                                    <span>New York, NY</span>
-                                </div>
-                                <p class="text-gray-600 leading-relaxed mb-3 text-xs">
-                                    Developed responsive websites and web applications for various clients. Optimized
-                                    performance resulting in 30% faster load times across all projects.
-                                </p>
-                                <div class="flex flex-wrap gap-1">
-                                    <span
-                                        class="bg-gray-100 rounded-full px-2 py-0.5 text-xs font-medium text-gray-700">React</span>
-                                    <span
-                                        class="bg-gray-100 rounded-full px-2 py-0.5 text-xs font-medium text-gray-700">TypeScript</span>
-                                    <span
-                                        class="bg-gray-100 rounded-full px-2 py-0.5 text-xs font-medium text-gray-700">Sass</span>
-                                    <span
-                                        class="bg-gray-100 rounded-full px-2 py-0.5 text-xs font-medium text-gray-700">Webpack</span>
-                                    <span
-                                        class="bg-gray-100 rounded-full px-2 py-0.5 text-xs font-medium text-gray-700">Jest</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-
-
-
 
     <!-- Featured Projects Section -->
-    <section class="py-12 px-4 bg-white" id="projects">
+    <section class="py-12 px-4 bg-gray-50" id="projects">
         <div class="max-w-6xl mx-auto">
             <!-- Section Header -->
             <div class="text-center mb-12">
@@ -675,15 +402,14 @@
 
                         <div class="flex flex-wrap gap-2 mb-6">
                             <span
-                                class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">React</span>
+                                class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">React</span>
                             <span
-                                class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">Node.js</span>
+                                class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">Node.js</span>
                             <span
-                                class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">PostgreSQL</span>
+                                class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">PostgreSQL</span>
                             <span
-                                class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">Stripe</span>
-                            <span
-                                class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">AWS</span>
+                                class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">Stripe</span>
+                            <span class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">AWS</span>
                         </div>
 
                         <!-- Action Buttons - UPDATED STYLING -->
@@ -724,15 +450,15 @@
 
                         <div class="flex flex-wrap gap-2 mb-6">
                             <span
-                                class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">Next.js</span>
+                                class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">Next.js</span>
                             <span
-                                class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">TypeScript</span>
+                                class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">TypeScript</span>
                             <span
-                                class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">Prisma</span>
+                                class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">Prisma</span>
                             <span
-                                class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">Socket.io</span>
+                                class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">Socket.io</span>
                             <span
-                                class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">Vercel</span>
+                                class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">Vercel</span>
                         </div>
 
                         <!-- Action Buttons - UPDATED STYLING -->
@@ -773,18 +499,18 @@
 
                         <div class="flex flex-wrap gap-2 mb-6">
                             <span
-                                class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">Vue.js</span>
+                                class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">Vue.js</span>
                             <span
-                                class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">Python</span>
+                                class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">Python</span>
                             <span
-                                class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">FastAPI</span>
+                                class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">FastAPI</span>
                             <span
-                                class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">D3.js</span>
+                                class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">D3.js</span>
                             <span
-                                class="bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-700">Docker</span>
+                                class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">Docker</span>
                         </div>
 
-                        <!-- Action Buttons - UPDATED STYLING -->
+                        <!-- Action Buttons  -->
                         <div class="flex gap-3">
                             <button
                                 class="flex items-center gap-2 bg-white border-2 border-gray-900 text-gray-900 px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-900 hover:text-white transition-colors">
@@ -813,56 +539,472 @@
         </div>
     </section>
 
+    <!-- Work Experience Section -->
+    <section class="py-12 px-4 bg-white" id="experience">
+        <div class="max-w-6xl mx-auto">
+            <!-- Section Header -->
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-semibold text-black mb-3">Work Experience & Education</h2>
+                <p class="text-4xl text-gray-500 max-w-xl mx-auto">
+                    Over 2+ years of building backend systems, automation workflows, and now expanding into DevOps.
+                </p>
+            </div>
 
-    <!-- Contact Section - Simple Design -->
-    <section class="py-16 px-4 bg-gray-50" id="contact">
-        <div class="max-w-4xl mx-auto">
+            <!-- Timeline - Desktop ONLY (Hidden on Mobile) -->
+            <div class="relative hidden lg:block">
+                <!-- Central Timeline Line -->
+                <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gray-200 rounded-full"></div>
+
+                <!-- Timeline Items -->
+                <div class="space-y-8">
+                    <!-- Experience Item 1 (Left Side) -->
+                    <div class="flex items-center justify-between">
+                        <div class="w-5/12 pr-2">
+                            <div
+                                class="desktop-experience-1 bg-white rounded-2xl p-6 shadow-sm border border-gray-200 hover:shadow-md transition-all duration-300">
+                                <h3 class="text-sm font-bold text-black mb-1">Associate Software Engineer</h3>
+                                <h4 class="text-xs font-semibold text-gray-600 mb-1">Mphasis Ltd.</h4>
+                                <p class="text-xs text-gray-500 mb-3">Client: HPE</p>
+
+                                <div class="flex items-center text-xs text-gray-500 mb-1">
+                                    <i class="far fa-calendar mr-1"></i>
+                                    <span>Oct 2024 - Present</span>
+                                </div>
+                                <div class="flex items-center text-xs text-gray-500 mb-4">
+                                    <i class="fas fa-map-marker-alt mr-1"></i>
+                                    <span>Bangalore, India</span>
+                                </div>
+
+                                <!-- Bullet Points -->
+                                <ul class="text-gray-600 mb-4 text-xs space-y-1">
+                                    <li class="flex items-start">
+                                        <span class="w-1 h-1 bg-gray-400 rounded-full mt-1.5 mr-2 flex-shrink-0"></span>
+                                        Designed and developed Python automation scripts using pyVmomi and request APIs
+                                        to eliminate manual
+                                        provisioning and configuration tasks, reducing manual setup time by 90% and
+                                        minimizing configuration errors
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="w-1 h-1 bg-gray-400 rounded-full mt-1.5 mr-2 flex-shrink-0"></span>
+                                        Streamlined end-to-end deployment, configuration, migration, and validation of
+                                        Linux/Unix VMs, storage
+                                        systems, and network servers on bare-metal environments.
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="w-1 h-1 bg-gray-400 rounded-full mt-1.5 mr-2 flex-shrink-0"></span>
+                                        Utilized JSON-based configuration schemas for dynamic data validation and
+                                        seamless process automation
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="w-1 h-1 bg-gray-400 rounded-full mt-1.5 mr-2 flex-shrink-0"></span>
+                                        Developed a Flask-based web dashboard for real-time monitoring and management of
+                                        server and storage
+                                        assets, featuring asset tracking, alerting, and inventory management
+                                        capabilities.
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="w-1 h-1 bg-gray-400 rounded-full mt-1.5 mr-2 flex-shrink-0"></span>
+                                        Integrated backend services to optimize asset data retrieval, updates, and alert
+                                        notifications for proactive
+                                        infrastructure management.
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="w-1 h-1 bg-gray-400 rounded-full mt-1.5 mr-2 flex-shrink-0"></span>
+                                        Actively contributed to design reviews, code reviews, and ensured timely feature
+                                        delivery.
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="w-1 h-1 bg-gray-400 rounded-full mt-1.5 mr-2 flex-shrink-0"></span>
+                                        Technical interview panelist, contributing to candidate selection processes for
+                                        the team.
+                                    </li>
+                                </ul>
+
+                                <div class="flex flex-wrap gap-1 mb-4">
+                                    <span
+                                        class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">Python</span>
+                                    <span
+                                        class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">Linux</span>
+                                    <span
+                                        class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">VMware
+                                        vSphere</span>
+                                    <span
+                                        class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">Flask</span>
+                                    <span
+                                        class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">Kubernetes</span>
+                                    <span
+                                        class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">Git</span>
+                                    <span
+                                        class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">GitHub</span>
+                                    <span
+                                        class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">Terraform</span>
+                                    <span
+                                        class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">pyVmomi</span>
+                                </div>
+
+                                <!-- Award Placeholder -->
+                                <div class="bg-yellow-50 border border-yellow-200 rounded-md px-2 py-1 inline-block">
+                                    <p class="text-xs font-medium m-0 flex flex-col">
+                                        <span class="text-yellow-800 flex items-center">
+                                            <i class="fas fa-trophy mr-1"></i>
+                                            Award: Laurel - Q3 2024-25
+                                        </span>
+                                        <span class="text-gray-500 mt-0.5">
+                                            Recognition by the manager for demonstrating
+                                            a Can-Do Attitude, Customer centricity, and Responsibility.
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Timeline Circle -->
+                        <div class="w-5 h-5 bg-gray-900 border-4 border-white rounded-full relative z-10 shadow-lg">
+                        </div>
+
+                        <div class="w-5/12"></div>
+                    </div>
+
+                    <!-- Experience Item 2 (Right Side) -->
+                    <div class="flex items-center justify-between">
+                        <div class="w-5/12"></div>
+
+                        <!-- Timeline Circle -->
+                        <div class="w-5 h-5 bg-gray-900 border-4 border-white rounded-full relative z-10 shadow-lg">
+                        </div>
+
+                        <div class="w-5/12 pl-2">
+                            <div
+                                class="desktop-experience-2 bg-white rounded-2xl p-6 shadow-sm border border-gray-200 hover:shadow-md transition-all duration-300">
+                                <h3 class="text-sm font-bold text-black mb-1">Associate Software Engineer</h3>
+                                <h4 class="text-xs font-semibold text-gray-600 mb-1">Mphasis Ltd.</h4>
+                                <p class="text-xs text-gray-500 mb-3">Client: Riverbed</p>
+
+                                <div class="flex items-center text-xs text-gray-500 mb-1">
+                                    <i class="far fa-calendar mr-1"></i>
+                                    <span>Aug 2023 - Sep 2024</span>
+                                </div>
+                                <div class="flex items-center text-xs text-gray-500 mb-4">
+                                    <i class="fas fa-map-marker-alt mr-1"></i>
+                                    <span>Bangalore, India</span>
+                                </div>
+
+                                <!-- Bullet Points -->
+                                <ul class="text-gray-600 mb-4 text-xs space-y-1">
+                                    <li class="flex items-start">
+                                        <span class="w-1 h-1 bg-gray-400 rounded-full mt-1.5 mr-2 flex-shrink-0"></span>
+                                        Developed Python scripts using pyVmomi for automated storage backups supporting
+                                        ISCSI and NFS
+                                        protocols.
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="w-1 h-1 bg-gray-400 rounded-full mt-1.5 mr-2 flex-shrink-0"></span>
+                                        Implemented functionalities like request URL building, HTTP file handling, and
+                                        SOAP API response task
+                                        functions in Python.
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="w-1 h-1 bg-gray-400 rounded-full mt-1.5 mr-2 flex-shrink-0"></span>
+                                        Ensured FOSSA compliance for Python scripts to meet client security
+                                        requirements.
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="w-1 h-1 bg-gray-400 rounded-full mt-1.5 mr-2 flex-shrink-0"></span>
+                                        Enhanced Python scripts for hypervisor configuration via appliance CLI for
+                                        SteelFusion enhancements.
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="w-1 h-1 bg-gray-400 rounded-full mt-1.5 mr-2 flex-shrink-0"></span>
+                                        Built software images and deployed them on bare-metal systems using CI/CD
+                                        pipelines
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="w-1 h-1 bg-gray-400 rounded-full mt-1.5 mr-2 flex-shrink-0"></span>
+                                        Created test plans and test cases for validating automation scripts.
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="w-1 h-1 bg-gray-400 rounded-full mt-1.5 mr-2 flex-shrink-0"></span>
+                                        Replicated customer defects in local VLAN environments for the
+                                        SteelHead/Interceptor product. Performed root
+                                        cause analysis and implemented fixes.
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="w-1 h-1 bg-gray-400 rounded-full mt-1.5 mr-2 flex-shrink-0"></span>
+                                        Technical interview panelist, contributing to candidate selection processes for
+                                        the team.
+                                    </li>
+                                </ul>
+
+                                <div class="flex flex-wrap gap-1 mb-4">
+                                    <span
+                                        class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">Python</span>
+                                    <span
+                                        class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">VMware
+                                        vSphere</span>
+                                    <span
+                                        class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">Perl</span>
+                                    <span
+                                        class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">pyVmomi</span>
+                                    <span
+                                        class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">Jenkins</span>
+                                    <span
+                                        class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">Linux</span>
+                                    <span
+                                        class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">UNIX</span>
+                                    <span
+                                        class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">VLAN</span>
+                                    <span
+                                        class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">Hypervisor</span>
+                                    <span
+                                        class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">JIRA</span>
+                                    <span
+                                        class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">FOSSA</span>
+                                    <span
+                                        class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">GIT</span>
+                                    <span
+                                        class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">Bitbucket</span>
+                                </div>
+
+                                <div
+                                    class="bg-yellow-50 border border-yellow-200 rounded-md px-2 py-1 inline-block w-full">
+                                    <p class="text-xs font-medium m-0 flex flex-col">
+                                        <span class="text-yellow-800 flex items-center">
+                                            <i class="fas fa-trophy mr-1"></i>
+                                            Award: Kudos - Q4 2023-24
+                                        </span>
+                                        <span class="text-gray-500 mt-0.5">
+                                            Received from the manager for being a consistent high performer.
+                                        </span>
+                                    </p>
+                                </div>
+
+                                <div
+                                    class="bg-yellow-50 border border-yellow-200 rounded-md px-2 py-1 inline-block w-full mt-2">
+                                    <p class="text-xs font-medium m-0 flex flex-col">
+                                        <span class="text-yellow-800 flex items-center">
+                                            <i class="fas fa-trophy mr-1"></i>
+                                            Award: Kudos - Q4 2023-24
+                                        </span>
+                                        <span class="text-gray-500 mt-0.5">
+                                            Earned a second award for demonstrating consistent performance during the
+                                            same quarter from product manager.
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Experience Item 3 (Left Side) -->
+                    <div class="flex items-center justify-between">
+                        <div class="w-5/12 pr-2">
+                            <div
+                                class="desktop-experience-3 bg-white rounded-2xl p-6 shadow-sm border border-gray-200 hover:shadow-md transition-all duration-300">
+                                <h3 class="text-sm font-bold text-black mb-1">Full Stack Developer Intern</h3>
+                                <h4 class="text-xs font-semibold text-gray-600 mb-1">Mphasis Ltd.</h4>
+
+                                <div class="flex items-center text-xs text-gray-500 mb-1">
+                                    <i class="far fa-calendar mr-1"></i>
+                                    <span>Apr 2023 - Jun 2023</span>
+                                </div>
+                                <div class="flex items-center text-xs text-gray-500 mb-4">
+                                    <i class="fas fa-map-marker-alt mr-1"></i>
+                                    <span>Bangalore, India</span>
+                                </div>
+
+                                <!-- Bullet Points -->
+                                <ul class="text-gray-600 mb-4 text-xs space-y-1">
+                                    <li class="flex items-start">
+                                        <span class="w-1 h-1 bg-gray-400 rounded-full mt-1.5 mr-2 flex-shrink-0"></span>
+                                        Designed and developed a full-stack web application with Java, Spring Boot, and
+                                        ReactJS.
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="w-1 h-1 bg-gray-400 rounded-full mt-1.5 mr-2 flex-shrink-0"></span>
+                                        Built RESTful APIs and backend services for efficient data management using
+                                        PostgreSQL
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="w-1 h-1 bg-gray-400 rounded-full mt-1.5 mr-2 flex-shrink-0"></span>
+                                        Implemented responsive user interfaces with ReactJS and CSS.
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="w-1 h-1 bg-gray-400 rounded-full mt-1.5 mr-2 flex-shrink-0"></span>
+                                        Integrated Grafana dashboards for real-time data visualization.
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="w-1 h-1 bg-gray-400 rounded-full mt-1.5 mr-2 flex-shrink-0"></span>
+                                        Presented project demos to senior management and stakeholders, highlighting its
+                                        features, functionality, and
+                                        successful implementation.
+                                    </li>
+                                </ul>
+
+                                <div class="flex flex-wrap gap-1 mb-4">
+                                    <span
+                                        class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">Java</span>
+                                    <span
+                                        class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">PostgreSQL</span>
+                                    <span
+                                        class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">Spring
+                                        Boot</span>
+                                    <span
+                                        class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">ReactJS</span>
+                                    <span
+                                        class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">Grafana</span>
+                                    <span
+                                        class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">Swagger</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Timeline Circle -->
+                        <div class="w-5 h-5 bg-gray-900 border-4 border-white rounded-full relative z-10 shadow-lg">
+                        </div>
+
+                        <div class="w-5/12"></div>
+                    </div>
+
+                    <!-- Experience Item 4 (Right Side) -->
+                    <div class="flex items-center justify-between">
+                        <div class="w-5/12"></div>
+
+                        <!-- Timeline Circle -->
+                        <div class="w-5 h-5 bg-gray-900 border-4 border-white rounded-full relative z-10 shadow-lg">
+                        </div>
+
+                        <div class="w-5/12 pl-2">
+                            <div
+                                class="desktop-experience-4 bg-white rounded-2xl p-6 shadow-sm border border-gray-200 hover:shadow-md transition-all duration-300">
+                                <h3 class="text-sm font-bold text-black mb-1">B.Tech in Computer Science and Engineering
+                                </h3>
+                                <h4 class="text-xs font-semibold text-gray-600 mb-1">Presidency University</h4>
+
+                                <div class="flex items-center text-xs text-gray-500 mb-1">
+                                    <i class="far fa-calendar mr-1"></i>
+                                    <span>Aug 2019 - Jun 2023</span>
+                                </div>
+                                <div class="flex items-center text-xs text-gray-500 mb-4">
+                                    <i class="fas fa-map-marker-alt mr-1"></i>
+                                    <span>Bangalore, India</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile Version ONLY (Hidden on Desktop) -->
+            <div class="lg:hidden">
+                <div class="relative">
+                    <!-- Vertical Timeline Line for Mobile -->
+                    <div class="absolute left-4 top-0 bottom-0 w-0.5 bg-gray-200 rounded-full"></div>
+
+                    <div class="space-y-6">
+                        <!-- Mobile Experience Item 1 -->
+                        <div class="relative flex">
+                            <!-- Timeline Circle -->
+                            <div
+                                class="absolute left-1.5 w-6 h-6 bg-gray-900 border-2 border-white rounded-full flex items-center justify-center shadow-lg">
+                            </div>
+
+                            <!-- Content -->
+                            <div
+                                class="mobile-experience-1 ml-12 bg-white rounded-2xl p-4 shadow-sm border border-gray-200 flex-1">
+                            </div>
+                        </div>
+
+                        <!-- Mobile Experience Item 2 -->
+                        <div class="relative flex">
+                            <!-- Timeline Circle -->
+                            <div
+                                class="absolute left-1.5 w-6 h-6 bg-gray-900 border-2 border-white rounded-full flex items-center justify-center shadow-lg">
+                            </div>
+
+                            <!-- Content -->
+                            <div
+                                class="mobile-experience-2 ml-12 bg-white rounded-2xl p-4 shadow-sm border border-gray-200 flex-1">
+                            </div>
+                        </div>
+                        <!-- Mobile Experience Item 3 -->
+                        <div class="relative flex">
+                            <!-- Timeline Circle -->
+                            <div
+                                class="absolute left-1.5 w-6 h-6 bg-gray-900 border-2 border-white rounded-full flex items-center justify-center shadow-lg">
+                            </div>
+
+                            <!-- Content -->
+                            <div
+                                class="mobile-experience-3 ml-12 bg-white rounded-2xl p-4 shadow-sm border border-gray-200 flex-1">
+                            </div>
+                        </div>
+                        <!-- Mobile Experience Item 4 -->
+                        <div class="relative flex">
+                            <!-- Timeline Circle -->
+                            <div
+                                class="absolute left-1.5 w-6 h-6 bg-gray-900 border-2 border-white rounded-full flex items-center justify-center shadow-lg">
+                            </div>
+
+                            <!-- Content -->
+                            <div
+                                class="mobile-experience-4 ml-12 bg-white rounded-2xl p-4 shadow-sm border border-gray-200 flex-1">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-8 px-4 bg-gray-50" id="contact">
+        <div class="max-w-6xl mx-auto">
             <!-- Section Content -->
-            <div class="max-w-2xl">
-                <h2 class="text-4xl font-bold text-black mb-8">Let's Connect</h2>
-                <p class="text-lg text-gray-600 leading-relaxed mb-12">
-                    I'm always interested in hearing about new opportunities, whether it's a freelance project,
-                    full-time position, or just a chat about technology and innovation.
+            <div class="text-left">
+                <h2 class="text-2xl font-bold text-black mb-4">Let's Connect</h2>
+                <p class="text-sm text-gray-600 leading-relaxed mb-8 max-w-lg">
+                    I'm always interested in hearing about new opportunities in full-time position, or just a chat about
+                    technology.
                 </p>
 
                 <!-- Contact Information -->
-                <div class="space-y-6">
+                <div class="space-y-4 max-w-lg">
                     <!-- Email -->
-                    <div class="flex items-start gap-6">
-                        <div class="w-16 h-16 bg-gray-200 rounded-2xl flex items-center justify-center flex-shrink-0">
-                            <i class="fas fa-envelope text-xl text-gray-700"></i>
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-gray-200 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-envelope text-base text-gray-700"></i>
                         </div>
                         <div>
-                            <h3 class="text-xl font-bold text-black mb-2">Email</h3>
+                            <h3 class="text-base font-bold text-black mb-1">Email</h3>
                             <a href="mailto:varshiths499@gmail.com"
-                                class="text-lg text-gray-600 hover:text-gray-900 transition-colors">
+                                class="text-sm text-gray-600 hover:text-gray-900 transition-colors">
                                 varshiths499@gmail.com
                             </a>
                         </div>
                     </div>
 
                     <!-- Phone -->
-                    <div class="flex items-start gap-6">
-                        <div class="w-16 h-16 bg-gray-200 rounded-2xl flex items-center justify-center flex-shrink-0">
-                            <i class="fas fa-phone text-xl text-gray-700"></i>
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-gray-200 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-phone text-base text-gray-700"></i>
                         </div>
                         <div>
-                            <h3 class="text-xl font-bold text-black mb-2">Phone</h3>
+                            <h3 class="text-base font-bold text-black mb-1">Phone</h3>
                             <a href="tel:+919886446833"
-                                class="text-lg text-gray-600 hover:text-gray-900 transition-colors">
+                                class="text-sm text-gray-600 hover:text-gray-900 transition-colors">
                                 +91 9886446833
                             </a>
                         </div>
                     </div>
 
                     <!-- Location -->
-                    <div class="flex items-start gap-6">
-                        <div class="w-16 h-16 bg-gray-200 rounded-2xl flex items-center justify-center flex-shrink-0">
-                            <i class="fas fa-map-marker-alt text-xl text-gray-700"></i>
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-gray-200 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-map-marker-alt text-base text-gray-700"></i>
                         </div>
                         <div>
-                            <h3 class="text-xl font-bold text-black mb-2">Location</h3>
-                            <span class="text-lg text-gray-600">Bangalore, India</span>
+                            <h3 class="text-base font-bold text-black mb-1">Location</h3>
+                            <span class="text-sm text-gray-600">Bangalore, India</span>
                         </div>
                     </div>
                 </div>
@@ -871,13 +1013,13 @@
     </section>
 
     <!-- Simple Footer -->
-    <footer class="py-12 px-4 bg-white border-t border-gray-100">
+    <footer class="pt-12 pb-4 px-4 bg-white border-t border-gray-100">
         <div class="max-w-6xl mx-auto">
             <div class="flex flex-col md:flex-row md:items-center md:justify-between">
                 <!-- Left Side: Name and Tagline -->
                 <div class="text-center md:text-left mb-6 md:mb-0">
                     <h3 class="text-lg font-bold text-gray-900 mb-2">Varshith S</h3>
-                    <p class="text-gray-600">Building the future, one line of code at a time.</p>
+                    <p class="text-gray-600">Software Engineer | DevOps Enthusiast</p>
                 </div>
 
                 <!-- Right Side: Social Links -->
@@ -894,10 +1036,6 @@
                         class="text-gray-600 hover:text-gray-900 transition-colors" title="Twitter">
                         <i class="fab fa-twitter text-xl"></i>
                     </a>
-                    <a href="mailto:varshiths499@gmail.com" class="text-gray-600 hover:text-gray-900 transition-colors"
-                        title="Email">
-                        <i class="fas fa-envelope text-xl"></i>
-                    </a>
                 </div>
             </div>
 
@@ -907,9 +1045,6 @@
             </div>
         </div>
     </footer>
-
-
-
 
     <script src="script.js"></script>
     <script>

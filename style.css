@@ -338,6 +338,187 @@ section {
         transform: none !important;
     }
 }
+
 .no-border-transition {
-  transition-property: transform, color !important;
+    transition-property: transform, color !important;
+}
+
+/* Experience section wider cards and smaller fonts */
+#experience {
+    max-width: 100vw;
+}
+
+#experience .max-w-7xl {
+    max-width: 1440px;
+}
+
+/* Escape the slash in Tailwind class names */
+@media (min-width: 1024px) {
+    #experience .w-5\/12 {
+        width: 45%;
+    }
+}
+
+/* Smaller fonts for more content */
+#experience h3 {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+}
+
+#experience h4 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+}
+
+#experience p,
+#experience li {
+    font-size: 0.75rem;
+    line-height: 1.125rem;
+}
+
+#experience .text-xs {
+    font-size: 0.6875rem;
+    line-height: 1rem;
+}
+
+/* Better bullet spacing */
+#experience ul li {
+    margin-left: 0.5rem;
+}
+
+/* Compact Contact Section Styling */
+#contact {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+#contact .max-w-2xl {
+    max-width: 32rem;
+}
+
+#contact .max-w-lg {
+    max-width: 28rem;
+}
+
+#contact h2 {
+    font-size: 1.5rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+#contact p {
+    font-size: 0.875rem;
+    line-height: 1.4;
+    margin-bottom: 2rem;
+}
+
+#contact h3 {
+    font-size: 1rem;
+    line-height: 1.2;
+    margin-bottom: 0.25rem;
+}
+
+#contact a,
+#contact span {
+    font-size: 0.875rem;
+    line-height: 1.3;
+}
+
+#contact .w-12 {
+    width: 3rem;
+    height: 3rem;
+}
+
+#contact .space-y-4>*+* {
+    margin-top: 1rem;
+}
+
+/* Mobile adjustments */
+@media (max-width: 640px) {
+    #contact {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+
+    #contact h2 {
+        font-size: 1.25rem;
+    }
+
+    #contact p {
+        font-size: 0.8rem;
+    }
+
+    #contact h3 {
+        font-size: 0.9rem;
+    }
+
+    #contact a,
+    #contact span {
+        font-size: 0.8rem;
+    }
+
+    #contact .w-12 {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    #contact .gap-4 {
+        gap: 0.75rem;
+    }
+}
+
+/* Align Contact section with Footer text positioning */
+#contact {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+#contact .max-w-6xl {
+    max-width: 1152px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+#contact h2 {
+    font-size: 1.5rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+#contact p {
+    font-size: 0.875rem;
+    line-height: 1.4;
+    margin-bottom: 2rem;
+}
+
+#contact h3 {
+    font-size: 1rem;
+    line-height: 1.2;
+    margin-bottom: 0.25rem;
+}
+
+#contact a,
+#contact span {
+    font-size: 0.875rem;
+    line-height: 1.3;
+}
+
+/* Mobile adjustments */
+@media (max-width: 640px) {
+    #contact h2 {
+        font-size: 1.25rem;
+    }
+
+    #contact p {
+        font-size: 0.8rem;
+    }
+
+    #contact h3 {
+        font-size: 0.9rem;
+    }
+
+    #contact a,
+    #contact span {
+        font-size: 0.8rem;
+    }
 }
