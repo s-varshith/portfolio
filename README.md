@@ -6,7 +6,7 @@
 
 This repository hosts my personal portfolio website - a responsive and interactive platform to showcase my skills, projects, experience and contact information.
 
-**Live:** [s-varshith.github.io/portfolio](https://s-varshith.github.io/portfolio/)
+**Live:** <a href="https://s-varshith.github.io/portfolio/" target="_blank">s-varshith.github.io/portfolio</a>
 
 
 ## Table of Contents
@@ -34,9 +34,9 @@ This repository hosts my personal portfolio website - a responsive and interacti
 ## Contact
 
 **Author:** Varshith S   
-**Website:** [Portfolio](https://s-varshith.github.io/portfolio/)  
-**GitHub:** [s-varshith](https://github.com/s-varshith)  
-**Email:** [varshiths499@gmail.com](mailto:varshiths499@gmail.com)
+**Website:** <a href="https://s-varshith.github.io/portfolio/" target="_blank">Portfolio</a>  
+**GitHub:** <a href="https://github.com/s-varshith" target="_blank">s-varshith</a>  
+**Email:** <a href="mailto:varshiths499@gmail.com" target="_blank">varshiths499@gmail.com</a>  
 
 
 **Thank you for visiting my portfolio!**
