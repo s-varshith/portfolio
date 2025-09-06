@@ -36,6 +36,7 @@ This repository hosts my personal portfolio website - a responsive and interacti
 **Author:** Varshith S   
 **Website:** [Portfolio](https://s-varshith.github.io/portfolio/)  
 **GitHub:** [s-varshith](https://github.com/s-varshith)  
+**linkedin:** [varshith-s](https://www.linkedin.com/in/varshith-s/)  
 **Email:** [varshiths499@gmail.com](mailto:varshiths499@gmail.com)
 
 
