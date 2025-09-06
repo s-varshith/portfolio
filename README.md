@@ -4,24 +4,17 @@
 
 ## Overview
 
-This repository hosts my personal portfolio website — a responsive and interactive platform to showcase my skills, projects, and contact information.
+This repository hosts my personal portfolio website - a responsive and interactive platform to showcase my skills, projects, experience and contact information.
 
-**Live Demo:** [s-varshith.github.io/portfolio](https://s-varshith.github.io/portfolio/)
+**Live:** [s-varshith.github.io/portfolio](https://s-varshith.github.io/portfolio/)
 
----
 
 ## Table of Contents
 
 - [Features](#features)  
-- [Technologies Used](#technologies-used)  
-- [Getting Started](#getting-started)  
-- [Project Structure](#project-structure)  
-- [Usage](#usage)  
-- [Contributing](#contributing)  
-- [License](#license)  
+- [Technologies Used](#technologies-used)    
 - [Contact](#contact)
 
----
 
 ## Features
 
@@ -30,7 +23,6 @@ This repository hosts my personal portfolio website — a responsive and interac
 - Organized sections for About Me, Projects, Skills, and Contact.
 - Clean, minimalist styling.
 
----
 
 ## Technologies Used
 
@@ -38,16 +30,7 @@ This repository hosts my personal portfolio website — a responsive and interac
 - **CSS** — For styling and responsive layouts.  
 - **JavaScript** — For interactivity and dynamic behaviors.
 
----
 
-## Getting Started
-
-### Prerequisites
+## Contact
 
 - Modern web browser (e.g., Chrome, Firefox, Edge).
-
-### Clone the Repository
-
-```bash
-git clone https://github.com/s-varshith/portfolio.git
-cd portfolio

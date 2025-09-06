@@ -381,12 +381,11 @@
 
             <!-- Projects Grid -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-grid">
-                <!-- Project 1: E-Commerce Platform -->
+                <!-- Project 1: Asset Inventory & Health Monitoring Dashboard -->
                 <div
                     class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group project-card">
                     <div class="relative overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=250&fit=crop&crop=center"
-                            alt="E-Commerce Platform"
+                        <img src="images/AssetHealthDashboard.png" alt="Asset Inventory & Health Monitoring Dashboard"
                             class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
                         <div
                             class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300">
@@ -394,50 +393,55 @@
                     </div>
 
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-black mb-2">E-Commerce Platform</h3>
+                        <h3 class="text-xl font-bold text-black mb-2">Asset Inventory & Health Monitoring Dashboard</h3>
                         <p class="text-gray-600 text-sm leading-relaxed mb-4">
-                            A full-stack e-commerce solution with payment integration, inventory management, and admin
-                            dashboard.
+                            A comprehensive web-based monitoring dashboard built with Python-Flask for tracking server
+                            assets, performance metrics, and managing alerts in real-time.
                         </p>
 
                         <div class="flex flex-wrap gap-2 mb-6">
                             <span
-                                class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">React</span>
+                                class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">Python</span>
                             <span
-                                class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">Node.js</span>
+                                class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">Flask</span>
+                            <span class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">HTML</span>
+                            <span class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">CSS</span>
+                            <span class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">JS</span>
                             <span
-                                class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">PostgreSQL</span>
+                                class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">sqlalchemy</span>
                             <span
-                                class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">Stripe</span>
-                            <span class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">AWS</span>
+                                class="bg-gray-100 rounded-md px-2 py-1 text-xs font-medium text-gray-700">SQLite</span>
                         </div>
 
-                        <!-- Action Buttons - UPDATED STYLING -->
+                        <!-- Action Buttons -->
                         <div class="flex gap-3">
-                            <button
-                                class="flex items-center gap-2 bg-white border-2 border-gray-900 text-gray-900 px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-900 hover:text-white transition-colors">
-                                <i class="fab fa-github"></i>
-                                <span>Code</span>
-                            </button>
-<!--                             <button
+                            <a href="https://github.com/s-varshith/AssetHealthDashboard" target="_blank"
+                                rel="noopener noreferrer">
+                                <button
+                                    class="flex items-center gap-2 bg-white border-2 border-gray-900 text-gray-900 px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-900 hover:text-white transition-colors">
+                                    <i class="fab fa-github"></i>
+                                    <span>Code</span>
+                                </button>
+                            </a>
+                        </div>
+
+                        <!-- <button
                                 class="flex items-center gap-2 bg-black text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-800 transition-colors">
                                 <i class="fas fa-external-link-alt"></i>
                                 <span>Live Demo</span>
                             </button> -->
-                        </div>
-
                     </div>
                 </div>
             </div>
+        </div>
 
-            <!-- Show More/Less Button -->
-            <div class="text-center mt-12" id="show-more-container">
-                <button id="show-more-btn"
-                    class="bg-transparent text-gray-900 border-2 border-gray-900 px-8 py-3 rounded-xl font-semibold transition-all hover:bg-gray-900 hover:text-white hover:-translate-y-0.5">
-                    <i class="fas fa-chevron-down mr-2"></i>
-                    Show More Projects
-                </button>
-            </div>
+        <!-- Show More/Less Button -->
+        <div class="text-center mt-12" id="show-more-container">
+            <button id="show-more-btn"
+                class="bg-transparent text-gray-900 border-2 border-gray-900 px-8 py-3 rounded-xl font-semibold transition-all hover:bg-gray-900 hover:text-white hover:-translate-y-0.5">
+                <i class="fas fa-chevron-down mr-2"></i>
+                Show More Projects
+            </button>
         </div>
     </section>
 
