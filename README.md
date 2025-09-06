@@ -18,7 +18,7 @@ This repository hosts my personal portfolio website - a responsive and interacti
 
 ## Features
 
-- Responsive design — looks great on mobile, tablet, and desktop.
+- Responsive design - looks great on mobile, tablet, and desktop.
 - Interactive UI elements such as animations, hover effects, and smooth scrolling.
 - Organized sections for About Me, Projects, Skills, and Contact.
 - Clean, minimalist styling.
@@ -26,11 +26,17 @@ This repository hosts my personal portfolio website - a responsive and interacti
 
 ## Technologies Used
 
-- **HTML** — For the semantic structure of web pages.  
-- **CSS** — For styling and responsive layouts.  
-- **JavaScript** — For interactivity and dynamic behaviors.
+- **HTML** - For the semantic structure of web pages.  
+- **CSS** - For styling and responsive layouts.  
+- **JavaScript** - For interactivity and dynamic behaviors.
 
 
 ## Contact
 
-- Modern web browser (e.g., Chrome, Firefox, Edge).
+**Author:** Varshith S   
+**Website:** [Portfolio](https://s-varshith.github.io/portfolio/)  
+**GitHub:** [s-varshith](https://github.com/s-varshith)  
+**Email:** [varshiths499@gmail.com](mailto:varshiths499@gmail.com)
+
+
+**Thank you for visiting my portfolio!**
